@@ -1,0 +1,11 @@
+NUM=02
+CMD="ifconfig | grep -w broadcast | sed 's/^.*broadcast //g' | cut -d' ' -f1"
+REZ=`ifconfig | grep -w broadcast | sed 's/^.*broadcast //g' | cut -d' ' -f1`
+FLD=network
+
+echo "\033[1;32m${FLD} ${NUM} a:\033[0m \033[1;31m${CMD}\033[0m"
+echo $REZ
+
+CMD='arp -a'
+echo "\033[1;32m${FLD} ${NUM} b:\033[0m \033[1;31m${CMD}\033[0m"
+arp -a
