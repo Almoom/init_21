@@ -2,6 +2,6 @@ NUM=14
 CMD="/etc/hosts"
 FLD=network
 
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD}\033[0m"
+echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31mВ данном файле можно найти локальные записи DNS ${CMD}\033[0m"
 echo "cd /etc
 cat hosts"

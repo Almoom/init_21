@@ -1,0 +1,6 @@
+NUM=01
+CMD="/etc/debian_version"
+FLD=system
+
+echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31mТекущую версию дэбиана можно найти в данном файле ${CMD}\033[0m"
+echo "cat ../../etc/debian_version"
