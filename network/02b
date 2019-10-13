@@ -1,0 +1,1 @@
+netstat -rn -I en0 | tail -n1 | awk '{print $3}'

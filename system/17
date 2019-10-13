@@ -1,5 +1,1 @@
-NUM=17
-CMD="ssh lj@127.0.0.1"
-FLD=system
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD}\033[0m"
+ssh lj@127.0.0.1

@@ -1,9 +1,4 @@
-NUM=08
-CMD="Используя сервис и базу данных WHOIS по ip DNS-серверов
+#whois $(dig +short slash16.org | head -n 1)
+
+Используя сервис и базу данных WHOIS по ip DNS-серверов
 находим провайдера: Amazon Technologies Inc.
-
-whois \$(dig +short slash16.org | head -n 1)"
-FLD=network
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD}\033[0m"
-whois $(dig +short slash16.org | head -n 1)

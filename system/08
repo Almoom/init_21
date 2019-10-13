@@ -1,9 +1,7 @@
-NUM=08
-CMD="~/.ssh/authorized_keys"
-FLD=system
+В файле ~/.ssh/authorized_keys содержатся ключи RSA систем, которым разрешено
+подключаться через SSH. Создать данный файл в папке можно следующими командами:
 
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31mВ файле ${CMD} содержатся ключи RSA систем, которым разрешено подключаться через SSH. Создать данный файл в папке можно следующими командами:\033[0m"
-echo "mkdir -p ~/.ssh"
-echo "chmod 700 ~/.ssh"
-echo "ssh-keygen -t rsa"
-echo "ssh-copy-id -i ~/.ssh/id_rsa.pub <user(=lj)>@<server(=debian)>"
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub <user(=lj)>@<server(=debian)>

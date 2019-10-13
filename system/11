@@ -1,5 +1,1 @@
-NUM=11
-CMD="df -h"
-FLD=system
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD}\033[0m"
+df -h

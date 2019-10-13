@@ -1,0 +1,12 @@
+#!/bin/bash
+
+text=$(links2 -dump https://ya-pogoda.ru/tochniy-prognoz/moscow/ | head -n18)
+#echo "$text"
+echo "\033[1;32m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"
+echo "$text" | grep 'Погода в' | sed 's/  //g'
+echo "$text" | grep 'сейчас:' | awk -F':' '{print $2}'
+echo "$text" | grep '°С' | sed 's/ //g'	| sed 's/^/ /g'
+echo "$text" | grep 'Ветер' | sed 's/^ */ /g' | sed 's/, /,/g'
+echo "$text" | grep 'Давление' | sed 's/^ */ /g'
+echo "$text" | grep 'Влажность' | sed 's/^ */ /g'
+echo "\033[1;32m▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\033[0m"

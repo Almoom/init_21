@@ -1,7 +1,4 @@
-NUM=02
-FLD=system
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m"
-echo "\033[1;31mUSER=\$1\033[0m"
-echo "\033[1;31mpgrep -u \$USER | while read PID; do sudo kill \$PID; done\033[0m"
-echo "\033[1;31msudo userdel \$USER\033[0m"
+#!/bin/bash
+USER=$1
+pgrep -u $USER | while read PID; do sudo kill $PID; done
+sudo userdel $USER

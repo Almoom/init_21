@@ -1,5 +1,2 @@
-NUM=01
-CMD="cat /etc/passwd | awk -F ':' '{print \$1,\$3,\$6}'"
-FLD=system
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD}\033[0m"
+#!/bin/bash
+cat /etc/passwd | awk -F':' '{print $1,$3,$7}'

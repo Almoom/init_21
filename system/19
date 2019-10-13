@@ -1,5 +1,2 @@
-NUM=19
-CMD="systemctl list-unit-files --type=service | grep enabled | awk '{print \$1}'"
-FLD=system
-
-echo "\033[1;32m${FLD} ${NUM}:\033[0m \033[1;31m${CMD} \\ Тип daemon\033[0m"
+systemctl list-unit-files --type=service | grep enabled | awk '{print $1}'
+\\ Тип daemon
